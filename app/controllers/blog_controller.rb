@@ -20,7 +20,9 @@ class BlogController < ApplicationController
     
     def update
         pp = Post.find(params[:id])
+        puts "wow"
         pp.writer = params[:irum]
+        
         pp.content = params[:naeyong]
         pp.save
         redirect_to :root
